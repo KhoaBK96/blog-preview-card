@@ -91,68 +91,95 @@ h6 {
   --font-weight-secondary: 800;
   --font-size: 16px;
 }
-
+a {
+  color: #000;
+  text-decoration: none;
+}
 body {
-  font-family: var(--font-primary);
-  min-height: 100vh;
+  background-color: var(--color-yellow);
+}
+
+#preview-card-container {
+  width: 384px;
+  height: 565px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 8px 8px 0px 0px black;
+  padding: 1.2rem;
+  margin: 13rem auto;
+}
+
+.preview-card-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-yellow);
 }
 
-.wrapper {
-  height: calc(520.71 / 16 * 1rem);
-  width: calc(382 / 16 * 1rem);
-  background-color: var(--color-white);
-  border-radius: 15px;
-  border: 1px solid black;
-  box-shadow: 9px 9px 0px rgba(0, 0, 0, 1);
-  padding: calc(24 / 16 * 1rem);
-}
-.wrapper > img {
-  border-radius: 15px;
-  margin-bottom: 24px;
+.preview-card-img img {
+  border-radius: 10px;
 }
 
-.wrapper div:first-of-type {
-  display: block;
-  width: fit-content;
+.preview-card-text {
+  margin-top: 1.2rem;
+  margin-left: 5px;
+}
+
+.yellow-bg {
   background-color: var(--color-yellow);
   padding: 4px 12px;
-  border-radius: 5px;
-  font-weight: var(--font-weight-secondary);
+  border-radius: 4px;
+  width: 90px;
 }
 
-h2 {
-  font-weight: var(--font-weight-primary);
-  font-size: var(--font-size);
-  margin-top: 12px;
-  margin-bottom: 12px;
+.published-date {
+  font-size: 14px;
+  font-weight: 500px;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
 }
 
-h1 {
-    color: var(--color-gray-950);
-    font-size: 24px;
-    margin-bottom: 12px;
-    font-weight: var(--font-weight-secondary);
-    line-height: 150%;
+.blog-post-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
 }
 
-p{
-    color: var(--color-gray-500);
-    font-size: 15px;
-    line-height: 150%;
-    margin-bottom: 24px;
+.blog-post-title:hover {
+  color: var(--color-yellow);
 }
 
-.profile{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 6px;
+.preview-text {
+  color: #7f7f7f;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
-#profle-img{
-    width: 2rem;
-    height: 2rem;
+
+.blog-post-avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-avatar-container h4 {
+  margin-left: 1rem;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* 
+Media Queries
+*/
+
+@media screen and (max-width: 500px) {
+  #preview-card-container {
+    width: 90%;
+    margin: 13rem auto;
+  }
+
+  .preview-card-img img {
+    width: 100%;
+  }
 }
